@@ -82,6 +82,6 @@ Database Management: Learning how to structure relational data and write SQL com
 
 Component Lifecycle: Managing how and when data should be fetched to optimize user experience.
 
-## Developed by Apoorva I U — 2026
+Developed by Apoorva I U — 2026
 
 
