@@ -1,0 +1,165 @@
+.home {
+    height: 100vh;
+    width: 100%;
+    /* Pure white background */
+    background: #ffffff;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 12%;
+    min-height: auto; 
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    cursor: none !important;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 60px;
+}
+
+.home-text {
+    flex: 1.2;
+    z-index: 2;
+    text-align: left;
+}
+
+.home-section {
+    min-height: 100vh; 
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.highlight {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #000000; /* Changed to Black */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1.1;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Moving letters in subtitle */
+.subtitle span {
+    font-size: 1.7rem !important;
+    color: #000000 !important; /* Changed to Black */
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+/* Blinking cursor */
+.typed-cursor {
+    color: #000000 !important; /* Changed to Black */
+    font-size: 1.7rem !important;
+    vertical-align: middle;
+}
+
+.subtitle {
+    margin-bottom: 30px;
+    min-height: 1.7rem;
+    display: flex;
+    align-items: center;
+}
+
+.home-text .description {
+    font-size: 1.8rem !important; 
+    line-height: 1.6;
+    color: #333333 !important; /* Darker grey for better readability with black theme */
+    max-width: 600px !important;
+    margin-bottom: 45px;
+    display: block !important;
+    font-weight: 500;
+}
+
+/* --- REFINED BLACK BUTTONS --- */
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 16px 35px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px; 
+    transition: 0.3s ease;
+    display: inline-block;
+    background-color: #000000; /* Changed to Black */
+    border: 2px solid #000000; /* Changed to Black */
+    color: #ffffff !important;
+    cursor: none !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+    background-color: transparent !important;
+    color: #000000 !important; /* Hover text Black */
+    transform: translateY(-3px);
+}
+
+.social-links {
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
+    justify-content: flex-start;
+}
+
+.social-links a {
+    color: #000000; /* Changed to Black */
+    font-size: 2.9rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    cursor: none !important;
+    opacity: 0.8;
+}
+
+.social-links a:hover {
+    color: #444444; /* Dark grey hover */
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+/* --- THE IMAGE CIRCLE (Black/Neutral Update) --- */
+.image-container {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid #ffffff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa; /* Changed to Very Light White Grey */
+    flex-shrink: 0;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08); 
+}
+
+.home-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1200px) {
+    .highlight { font-size: 3rem; }
+    .image-container { width: 380px; height: 380px; }
+}
+
+@media (max-width: 900px) {
+    .home-content { 
+        flex-direction: column-reverse; 
+        text-align: center; 
+    }
+    .home-text { display: flex; flex-direction: column; align-items: center; }
+    .highlight { font-size: 2.8rem; }
+    .cta-buttons { justify-content: center; }
+    .social-links { justify-content: center; }
+}

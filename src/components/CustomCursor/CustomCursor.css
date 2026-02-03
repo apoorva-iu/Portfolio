@@ -1,0 +1,32 @@
+/* Hide default cursor */
+html, body {
+    cursor: none !important;
+}
+
+/* The small fixed ball */
+.cursor-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #000000; /* Changed to Black */
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 10001;
+    transform: translate(-50%, -50%);
+}
+
+/* The smooth moving ring */
+.cursor-ring {
+    width: 45px;
+    height: 45px;
+    /* Changed to Black with a subtle opacity so it doesn't look too heavy */
+    border: 1.5px solid rgba(0, 0, 0, 0.8); 
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    
+    /* The smooth trailing movement */
+    transition: left 0.18s ease-out, top 0.18s ease-out; 
+}

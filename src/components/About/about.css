@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+#about {
+    padding-top: 100px;
+    margin-top: -100px; 
+    background-color: white; 
+    scroll-margin-top: 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-section {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-color: white; 
+    padding-bottom: 50px;
+    display: block;
+}
+
+.about {
+    min-height: auto;
+    padding: 60px 12%;
+    background-color: white; 
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    color: #000000; /* Changed to Black */
+    overflow: hidden;
+}
+
+.social-icons-container, .home-footer {
+    position: relative;
+    z-index: 1 !important; 
+}
+
+.about-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 80px;
+    margin-bottom: 50px;
+}
+
+.about-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+/* --- COLUMN 1: TYPOGRAPHY --- */
+.about-col-left {
+    flex: 1.2;
+}
+
+.about-title {
+    font-size: 5.5rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: -3px;
+    line-height: 1;
+    color: #000000; /* Changed to Black */
+}
+
+.about-title span {
+    /* Updated gradient to Black/Grey theme */
+    background: linear-gradient(to right, #000000, #444444);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
+}
+
+.about-bio {
+    font-size: 1.7rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-weight: 500;
+    color: #000000; /* Changed to Black */
+}
+
+.about-bio strong {
+    color: #000000; /* Changed to Black */
+    font-weight: 700;
+}
+
+.about-bio.small {
+    font-size: 1.6rem;
+    color: #000000; /* Dark Grey for small bio */
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+/* --- COLUMN 2: THE DATA CARD --- */
+.about-col-right {
+    flex: 1;
+}
+
+.about-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.cv-button-glow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 45px;
+    background: #000000; /* Button to Black */
+    border: 2px solid #000000; /* Border to Black */
+    border-radius: 12px;
+    color: #ffffff !important; 
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Black shadow */
+}
+
+.btn-icon {
+    font-size: 1.3rem;
+}
+
+.glass-card {
+    background: #f8f8f8; /* Light Neutral Grey instead of Light Blue */
+    border: 1px solid #000000; /* Subtle black border */
+    border-radius: 40px;
+    padding: 50px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
+}
+
+/* --- TAB NAV --- */
+.tab-navigation {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    margin-bottom: 50px;
+    gap: 100px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: #000000; /* Changed to Black */
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    padding: 15px 10px;
+    z-index: 1;
+}
+
+.tab-btn.active {
+    color: #000000;
+}
+
+.tab-indicator {
+    position: absolute;
+    bottom: -1px;
+    height: 3px;
+    background: #000000; /* Indicator to Black */
+}
+
+/* --- CONTENT LIST --- */
+.info-list {
+    list-style: none;
+    padding: 0;
+}
+
+.info-list li {
+    margin-bottom: 35px;
+    font-size: 1.4rem;
+    color: #000000; /* Changed to Black */
+    font-weight: 500;
+}
+
+.info-list li span {
+    display: block;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000000; /* Label to Black */
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.skill-group {
+    padding-bottom: 10px;
+}
+
+.info-label {
+    display: block;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000000; /* Secondary labels to Black */
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.skill-text {
+    font-size: 1.3rem;
+    color: #000000;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 1200px) {
+    .about-row { flex-direction: column; gap: 60px; text-align: center; }
+    .about-title { font-size: 4rem; }
+    .tab-navigation { justify-content: center; gap: 20px; }
+    .tab-indicator { display: none; }
+}

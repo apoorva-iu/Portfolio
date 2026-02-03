@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+/* --- PROJECTS SECTION --- */
+.projects-section {
+    background-color: white; 
+    padding: 80px 13%;
+    color: #000000 !important; /* Changed to Black */
+    position: relative;
+    overflow: hidden;
+    cursor:none;
+}
+
+.gallery-header {
+    font-size: 3rem;
+    letter-spacing: 5px;
+    margin-bottom: 60px;
+    margin-top: -50px;
+    text-align: center; 
+    width: 100%;
+    gap: 30px;
+    color: #000000; /* Changed to Black */
+}
+
+.gallery-header span { 
+    font-weight: 700;
+    /* Updated gradient to go from Black to Dark Grey */
+    background: linear-gradient(to right, #000000, #444444);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* 3-COLUMN BENTO GRID */
+.bento-motherboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-auto-rows: minmax(320px, auto);
+    gap: 35px;
+    grid-auto-flow: dense;
+}
+
+.cyber-card.wide { grid-column: span 2; }
+.cyber-card.standard { grid-column: span 1; }
+
+.cyber-card {
+    position: relative;
+    background: #efeff0;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle black border */
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+}
+
+.card-inner {
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cyber-card:hover {
+    z-index: 999 !important; 
+    transform: translateY(-15px) scale(1.05) !important; 
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15) !important;
+    border-color: #000000 !important; /* Hover border Black */
+    background: #ffffff !important;
+}
+
+.cyber-card:hover .project-title,
+.cyber-card:hover .project-desc {
+    color: #000000 !important; /* Force Black on Hover */
+    opacity: 1 !important;
+}
+
+/* CIRCUIT CONNECTORS */
+.circuit-h {
+    position: absolute;
+    width: 35px;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.2);
+    left: -35px;
+    top: 20%;
+}
+
+.circuit-node {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #000000; /* Node to Black */
+    border-radius: 50%;
+    left: -39px;
+    top: calc(20% - 4px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.status-badge {
+    font-family: monospace;
+    font-size: 1.3rem;
+    color: #000000; /* Badge text Black */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.blink-dot {
+    width: 6px; height: 6px;
+    background: #000000; /* Dot Black */
+    border-radius: 50%;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink { 50% { opacity: 0.3; } }
+
+.chipset { color: rgba(0, 0, 0, 0.2); font-size: 1.2rem; }
+
+.project-title { font-size: 1.5rem; margin-bottom: 10px; color: #000000; font-weight: 700; }
+.project-desc { font-size: 1.4rem; color: #000000; line-height: 1.6; margin-bottom: 20px; }
+
+.feature-list { margin-bottom: auto; }
+.feature-item { font-size: 1.4rem; color: #333333; margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
+.feature-item i { color: #000000; font-size: 0.6rem; } /* Icon to Black */
+
+.tech-footer {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tech-logos { display: flex; gap: 10px; }
+.tech-box img { width: 35px; height: 35px; object-fit: contain; }
+.tech-box i { font-size: 1.7rem; color: #000000; } /* Tech Icons Black */
+
+.repo-link {
+    font-size: 1.8rem;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.demo-btn {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #000000; /* Button text Black */
+    border: none;
+    padding: 5px 12px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    background: transparent;
+    cursor:none;
+    
+}
+
+.demo-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.repo-icon {
+    font-size: 2.3rem;
+    color: #444444 !important; /* GitHub icon Dark Grey */
+    transition: 0.3s ease;
+    cursor:none;
+}
+
+.repo-icon:hover {
+    color: #000000 !important; /* GitHub icon Black on hover */
+    transform: scale(1.4);
+}
+
+/* --- TOOLTIP BUBBLE --- */
+.tech-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech-box::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: 140%; 
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #000000; /* Tooltip Black */
+    color: #ffffff; 
+    padding: 4px 10px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 3px;
+    white-space: nowrap;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 999;
+
+}
+
+.tech-box::before {
+    content: "";
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #000000;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+/* 1. Show the Tooltip Text on Hover */
+.tech-box:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0); /* Smoothly slide up into place */
+}
+
+/* MAIN GITHUB LINK */
+.main-github-link {
+    display: inline-flex; 
+    align-items: center;
+    margin-left: 20px;
+    color: #000000 !important; /* Main GitHub Black */
+    font-size: 3.5rem;
+    transition: 0.3s ease;
+}
+
+.main-github-link:hover {
+    color: #444444 !important;
+    transform: scale(1.2) rotate(10deg);
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cyber-card { animation: fadeInUp 0.6s ease forwards; }
+
+@media (max-width: 1024px) {
+    .bento-motherboard { grid-template-columns: 1fr; }
+    .cyber-card.wide, .cyber-card.standard { grid-column: auto; }
+    .circuit-h, .circuit-node { display: none; }
+}

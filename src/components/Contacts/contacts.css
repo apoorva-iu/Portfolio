@@ -1,0 +1,304 @@
+/* Import Modern Tech Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+/* --- Section Container --- */
+.hologram-contact {
+  background-color: #ffffff; 
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 5%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* --- Outside Title (Large & Modern) --- */
+.outside-title {
+  font-size: clamp(1.5rem, 4vw, 3rem); 
+  color: #000000; /* Updated: Black */
+  text-align: center;
+  margin-bottom: 60px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.cyan-highlight {
+  color: #000000; /* Updated: Black */
+  text-shadow: none;
+  background: linear-gradient(to right, #000000, #444444);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* --- The Main Contact Box --- */
+.contact-frame {
+  display: flex;
+  width: 100%;
+  max-width: 1100px;
+  background: #ffffff; /* Updated: Solid White */
+  border: 4px solid #000000; /* Updated: Solid Black Border */
+  border-radius: 24px;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05); 
+}
+
+/* --- Left Sidebar --- */
+.contact-sidebar {
+  flex: 0.8;
+  background: #f8f9fa; /* Updated: Very Light White Grey */
+  padding: 50px 40px;
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.status-dot.pulse {
+  width: 10px;
+  height: 10px;
+  background: #000000; /* Updated: Black */
+  border-radius: 50%;
+  margin-right: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.8; }
+}
+
+.hub-text {
+  font-size: 1.3rem;
+  color: #000000; /* Updated: Black */
+  letter-spacing: 2px;
+}
+
+.side-item {
+  margin-bottom: 35px;
+}
+
+.side-label {
+  display: block;
+  font-size: 1.25rem;
+  color: #555555; /* Updated: Dark Grey */
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.side-value {
+  color: #000000; /* Updated: Black */
+  font-size: 1.3rem;
+}
+
+/* --- Icons Visibility --- */
+.side-socials {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.social-icon {
+  font-size: 2.5rem!important;
+  color: #000000!important; /* Updated: Black */
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+}
+
+.socials-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Updated Medium CV Button */
+.cv-pill-btn-medium {
+  width: fit-content;
+  min-width: 120px;
+  background: #000000; /* Updated: Black */
+  color: #fff; 
+  border: 1px solid #000000;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.cv-pill-btn-medium i {
+  font-size: 0.8rem;
+  color: #ffffff; /* Updated: White */
+}
+
+.cv-pill-btn-medium:hover {
+  background: #333333;
+  border-color: #333333;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.cv-pill-btn {
+  margin-top: auto;
+  background: #000000; /* Updated: Black */
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  cursor: none;
+  transition: 0.3s;
+}
+
+.cv-pill-btn:hover {
+  background: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Main Form Body --- */
+.contact-main {
+  flex: 1.2;
+  padding: 60px;
+  background: #ffffff;
+}
+
+.box-internal-title {
+  font-size: 1.3rem;
+  color: #000000; /* Updated: Black */
+  margin-bottom: 40px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-left: 3px solid #000000; /* Updated: Black */
+  padding-left: 15px;
+}
+
+.hologram-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.input-box input, 
+.input-box textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000; /* Updated: Black Border */
+  padding: 10px 0;
+  color: #000000;
+  font-size: 1.35rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-box label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  color: #888888; /* Updated: Muted Grey */
+  font-size: 1.27rem;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label,
+.input-box textarea:focus ~ label,
+.input-box textarea:valid ~ label {
+  top: -20px;
+  color: #000000; /* Updated: Black */
+  font-size: 1.2rem;
+}
+
+.glitch-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  
+  background: #000000; /* Updated: Black */
+  transition: 0.5s ease-in-out;
+}
+
+.input-box input:focus ~ .glitch-line,
+.input-box textarea:focus ~ .glitch-line {
+  width: 100%;
+}
+
+.neon-submit {
+  width: 100%;
+  padding: 20px;
+  background: #000000; /* Updated: Black */
+  border: 1px solid #000000;
+  color: #ffffff;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  letter-spacing: 3px;
+  cursor: none;
+  transition: all 0.4s;
+  border-radius: 4px;
+}
+
+.neon-submit:hover {
+  background: #333333;
+  border-color: #333333;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  letter-spacing: 5px; 
+}
+
+/* --- Responsive Layout remains same as yours --- */
+@media (max-width: 900px) {
+  .contact-frame { flex-direction: column; }
+  .contact-sidebar { border-right: none; border-bottom: 1px solid rgba(0, 0, 0, 0.05); padding: 40px; }
+  .outside-title { font-size: 2.8rem; }
+}
+
+/* --- Success State --- */
+.success-icon {
+  font-size: 4rem;
+  color: #000000; /* Updated: Black */
+  margin-bottom: 20px;
+}
+
+.success-title {
+  color: #000000; /* Updated: Black */
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  font-size: 1.7rem;
+}
+
+.success-text {
+  color: #444444; /* Updated: Grey */
+  line-height: 1.6;
+  max-width: 80%;
+  margin-bottom: 30px;
+  font-size: 1.4rem;
+}

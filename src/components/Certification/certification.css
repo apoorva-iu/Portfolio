@@ -1,0 +1,221 @@
+/* --- Certification Hub Section --- */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+
+.cert-hub {
+  padding: 100px 5%;
+  background-color: #ffffff;
+
+  width: 100%;
+}
+
+.cert-container {
+  max-width: 1300px; 
+  margin: 0 auto;
+}
+
+.cert-title {
+ 
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 80px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-weight: 800;
+  /* Updated Black/Grey Gradient */
+  background: linear-gradient(to right, #000000, #444444);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; 
+}
+
+/* --- THE GRID --- */
+.cert-grid {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 50px; 
+  justify-content: center;
+  width: 100%;
+}
+
+/* --- THE CARDS --- */
+.cert-card {
+  flex: 0 0 380px; 
+  width: 380px;
+  background: #ffffff;
+  border: 2px solid #000000; /* Border changed to Black */
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+  position: relative;
+}
+
+.cert-card:hover {
+  transform: translateY(-15px);
+  border-color: #444444; /* Darker border on hover */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.cert-preview {
+  position: relative;
+  height: 220px; 
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 2px solid #000000; /* Divider to Black */
+}
+
+/* Subtle background glow changed to neutral grey */
+.cert-preview::before {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.05);
+  filter: blur(50px);
+  border-radius: 50%;
+}
+
+.cert-img-small {
+  width: 92%; 
+  height: auto;
+  max-height: 90%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+
+.cert-card:hover .cert-img-small {
+  transform: scale(1.05);
+}
+
+.cert-hover-hint {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85); /* Darker Black background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0;
+  transition: 0.3s;
+  color: #ffffff; /* Icon to White for contrast on Black */
+  font-size: 2rem;
+  z-index: 2;
+}
+
+.cert-hover-hint::after {
+  content: 'CLICK_TO_EXPAND';
+  
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.cert-card:hover .cert-hover-hint {
+  opacity: 1;
+}
+
+.cert-info {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #fcfcfc;
+}
+
+.provider-logo {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.cert-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #000000; /* Text changed to Black */
+  line-height: 1.3;
+}
+
+/* --- UPDATED FULL-SCREEN OVERLAY --- */
+.cert-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.98); /* Deep Black backdrop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.overlay-content {
+  position: relative;
+  max-width: fit-content; 
+  width: auto;
+  background: #ffffff;
+  border: 4px solid #000000; /* Border changed to Black */
+  border-radius: 12px;
+  padding: 5px;
+  animation: modalPop 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes modalPop {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.img-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.img-wrapper img {
+  width: auto;
+  max-width: 95vw;
+  max-height: 85vh;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+}
+
+.close-btn {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  color: #cccccc; /* Subtle grey hover */
+  transform: rotate(90deg);
+}
+
+/* --- Mobile Fixes --- */
+@media (max-width: 600px) {
+  .cert-card {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  .overlay-content {
+    width: 98%;
+  }
+  .img-wrapper img {
+    max-height: 80vh;
+  }
+}

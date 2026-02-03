@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+/* --- NAVBAR SECTION --- */
+.navbar {
+    height: 7.5rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    left: 0;
+    padding: 0 12rem;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1000;
+    background-color: transparent; 
+    transition: all 0.4s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar.scrolled {
+    height: 6rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-container-aligned {
+    width: 75%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.branding-left {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    text-decoration: none;
+    cursor: none !important;
+    opacity: 1 !important;
+}
+
+.nav-logo-side {
+    height: 4.2rem;
+    width: auto;
+    /* Inverts to pure black */
+    filter: brightness(0); 
+    transition: transform 0.3s ease;
+}
+
+.nav-brand-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    color: #000000; /* Changed to Black */
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 0;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.brand-tagline {
+    color: #444444; /* Darker Grey for contrast */
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.branding-left:hover .nav-logo-side {
+    transform: scale(1.05);
+    filter: brightness(0) opacity(0.7); /* Subtle hover effect */
+}
+
+/* --- ABOUT SECTION --- */
+#about {
+    scroll-margin-top: 120px;
+    padding-top: 40px;
+}
+
+.about-section {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 50px;
+    display: block;
+    z-index: 1;
+}
+
+.about {
+    min-height: auto;
+    padding: 60px 12%;
+    background-color: #f8f9fa; /* Changed to Very Light White Grey */
+    display: block;
+    flex-direction: column;
+    font-family: 'Outfit', sans-serif;
+    color: #000000; /* Changed to Black */
+    overflow: hidden;
+    margin-top: -10vh;
+}
+
+.about-title {
+    font-size: 5.5rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: -3px;
+    line-height: 1;
+    color: #000000; /* Changed to Black */
+}
+
+.about-title span {
+    /* Black to Grey Gradient */
+    background: linear-gradient(to right, #000000, #555555);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
+}
+
+.about-bio {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-weight: 300;
+    color: #222222; /* Clean deep grey/black */
+}
+
+.about-bio strong {
+    color: #000000; /* Changed to Black */
+    font-weight: 700;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.9); /* More solid white for cleaner look */
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Very subtle black border */
+    border-radius: 40px;
+    padding: 50px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: #888888; /* Unselected Tab Color Grey */
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 10px;
+    cursor: none;
+}
+
+.tab-btn.active {
+    color: #000000; /* Active Tab Color Black */
+}
+
+.tab-indicator {
+    background: #000000; /* Indicator to Black */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.cv-button-glow {
+    background: #000000; /* Button to Black */
+    border: 1px solid #000000;
+    color: #ffffff;
+    border-radius: 12px;
+}
+
+.info-list li span, .info-label {
+    color: #000000; /* Highlighted labels to Black */
+    font-weight: 800;
+}
+
+.skill-text {
+    color: #333333; /* Dark Grey for text */
+}
